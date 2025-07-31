@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 
 const Header = () => {
+    const {user} = useContext(AuthContext)
     const links = 
     <>
         <li><NavLink to={'/'}>Home</NavLink></li>
@@ -28,7 +31,8 @@ const Header = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end gap-5">
+                <p>{user && user.email}</p>
                 <a className="btn">Button</a>
             </div>
         </div>
