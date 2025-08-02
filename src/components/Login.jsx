@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { sendEmailVerification } from "firebase/auth";
-import auth from "../firebase/firebase.config";
+
 
 
 const Login = () => {
